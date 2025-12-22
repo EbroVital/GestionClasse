@@ -13,7 +13,7 @@
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../css/ruang-admin.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script> -->
 </head>
@@ -265,21 +265,21 @@
                       <div class="card-body">
                           <?php if (!empty($dashboard['alertes_eleves_sans_notes'])): ?>
                               <div class="alert alert-info">
-                                  <strong class="text-danger"><i class="fas fa-user-clock"></i> <?= count($dashboard['alertes_eleves_sans_notes']) ?> élèves sans notes depuis 30 jours</strong> 
+                                  <strong><i class="fas fa-user-clock"></i> <?= count($dashboard['alertes_eleves_sans_notes']) ?> élèves sans notes depuis 30 jours</strong> 
                                   
                               </div>
                           <?php endif; ?>
                           
                           <?php if (!empty($dashboard['eleves_difficulte'])): ?>
                               <div class="alert alert-info">
-                                  <strong class="text-danger"><i class="fas fa-chart-line"></i> <?= count($dashboard['eleves_difficulte']) ?> élèves  en difficulté (moyenne &lt; 10) </strong> 
+                                  <strong><i class="fas fa-chart-line"></i> <?= count($dashboard['eleves_difficulte']) ?> élèves  en difficulté (moyenne &lt; 10) </strong> 
                                  
                               </div>
                           <?php endif; ?>
                           
                           <?php if (!empty($dashboard['meilleurs_eleves'])): ?>
                               <div class="alert alert-success">
-                                  <strong class="text-secondary"><i class="fas fa-star"></i> <?= count($dashboard['meilleurs_eleves']) ?> élèves
+                                  <strong><i class="fas fa-star"></i> <?= count($dashboard['meilleurs_eleves']) ?> élèves
                                   avec excellents résultats (≥ 16)</strong> 
                               </div>
                           <?php endif; ?>

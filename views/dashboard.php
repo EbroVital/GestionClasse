@@ -85,7 +85,7 @@
               <div class="stat-card text-white" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                   <i class="fas fa-file-alt stat-icon"></i>
                   <p class="stat-label">Notes saisies</p>
-                  <h2 class="stat-number"><?= number_format($stats['nb_notes_saisies']) ?></h2>
+                  <h2 class="stat-number"><?= $stats['nb_notes_saisies'] ?></h2>
               </div>
             </div>
             <!-- Pending Requests Card Example -->

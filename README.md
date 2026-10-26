@@ -1,7 +1,7 @@
-# 🎓 Système de Gestion de Classe
+#  Système de Gestion de Classe
 Un système complet de gestion scolaire développé en PHP natif, permettant aux professeurs de gérer les notes, générer des bulletins et suivre les performances des élèves.
-## ✨ Fonctionnalités
-### 👨‍🏫 Espace Professeur
+##  Fonctionnalités
+###  Espace Professeur
 - ✅ Dashboard interactif avec statistiques en temps réel
 - ✅ Gestion des notes : ajout, modification, suppression avec validation
 - ✅ Sélection dynamique des élèves par classe (AJAX)
@@ -10,14 +10,14 @@ Un système complet de gestion scolaire développé en PHP natif, permettant aux
 - ✅ Téléchargement ZIP de tous les bulletins d'une classe
 - ✅ Statistiques avancées : moyennes, taux de réussite
 - ✅ Alertes intelligentes : élèves en difficulté, sans notes récentes
-### 👨‍🎓 Espace Élève
+###  Espace Élève
 - ✅ Dashboard personnalisé avec toutes les informations académiques
 - ✅ Consultation des notes par trimestre et matière
 - ✅ Calcul automatique des moyennes pondérées
 - ✅ Téléchargement des bulletins au format PDF
 - ✅ Visualisation de la progression et du classement
 - ✅ Points forts et axes d'amélioration
-### 🔧 Fonctionnalités techniques
+###  Fonctionnalités techniques
 - ✅ Sélection dynamique classe → élèves (jQuery AJAX)
 - ✅ Auto-complétion des coefficients par matière
 - ✅ Génération PDF avec TCPDF
@@ -26,7 +26,7 @@ Un système complet de gestion scolaire développé en PHP natif, permettant aux
 - ✅ Architecture MVC claire et maintenable
 - ✅ Requêtes préparées (protection SQL injection)
 - ✅ Gestion des sessions sécurisée
-## 🛠 Technologies utilisées
+##  Technologies utilisées
 ### Backend
 - PHP 8.2+ - Langage principal
 - MySQL 8.0+ - Base de données relationnelle
@@ -40,14 +40,14 @@ Un système complet de gestion scolaire développé en PHP natif, permettant aux
 ## Bibliothèques PHP
 - TCPDF 6.7 - Génération de PDF
 - Composer - Gestion des dépendances
-## 📦 Prérequis
+##  Prérequis
 Avant de commencer, assurez-vous d'avoir :
 - PHP >= 8.0
 - MySQL >= 8.0 ou MariaDB >= 10.5
 - Apache ou Nginx
 - Composer (gestionnaire de dépendances PHP)
 - WAMP/XAMPP/MAMP (recommandé pour Windows/Mac)
-## 🚀 Installation
+##  Installation
 ### 1️⃣ Cloner le projet
 ```bash
 git clone https://github.com/EbroVital/GestionClasse.git
@@ -108,7 +108,7 @@ Identifiants de test :
 Avec WAMP/XAMPP
 - Démarrez les services Apache et MySQL
 - Accédez à : http://localhost/Gestion_Classe/
-## 📖 Utilisation
+##  Utilisation
 ### Connexion pour un professeur
 Accédez à http://localhost/Gestion_Classe/views/login.php et connectez-vous avec :
 Email : marie.dupont@ecole.fr
@@ -133,3 +133,5 @@ Le dashboard professeur affiche :
 - Taux de réussite par classe
 - Notes récentes
 - Alertes (élèves en difficulté, sans notes)
+
+## Capture d'ecran

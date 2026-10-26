@@ -223,7 +223,6 @@
 
     }
 
-
     // afficher toutes les notes d'un eleve de chaque matiere par trimestre
     function noteMat($connexion, $trimestre) {
 
@@ -251,7 +250,6 @@
         return $notes;
 
     }
-
 
     // bulletin du 1er trimestre
     function bulletinEleve($connexion, $trimestre) {
@@ -298,10 +296,6 @@
             'moyenne_generale' => $moyenne_generale,
         ];
     }
-
-
-
-
 
 
     //  ==============  les fonctions du professeur  ===================
@@ -466,7 +460,6 @@
     }
 
     // recuperer la liste des classes d'un prof (mise à jour : adaptation)
-
     function classe($connexion) {
 
         $idProf = $_SESSION['idProf'];
@@ -482,7 +475,7 @@
         return $classes;
 
     }
-
+    
     // ajout des notes 
     function ajoutNote($connexion) {
 

@@ -14,7 +14,7 @@
           $email = htmlspecialchars(strip_tags($_POST['email']));
           $mdp = htmlspecialchars(strip_tags($_POST['mdp']));
 
-          $stmt = $connexion->prepare("SELECT * FROM professeur WHERE email = :email");
+          $stmt = $connexion->prepare("SELECT * FROM professeurs WHERE email = :email");
           $stmt->bindValue(":email", $email);
           $stmt->execute();
           $req = $stmt->fetch();
@@ -25,7 +25,7 @@
 
             $password = password_hash($mdp, PASSWORD_BCRYPT);
 
-            $sql = $connexion->prepare("UPDATE professeur SET mdp = :mdp WHERE email = :email");
+            $sql = $connexion->prepare("UPDATE professeurs SET mdp = :mdp WHERE email = :email");
 
             $sql->bindValue(":mdp", $password);
             $sql->bindValue(":email", $email);

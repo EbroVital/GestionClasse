@@ -135,7 +135,8 @@ Le dashboard professeur affiche :
 - Alertes (élèves en difficulté, sans notes)
 
 ## Capture d'ecran
-<img width="1366" height="768" alt="TB" src="https://github.com/user-attachments/assets/e8e9e616-0c5a-4108-8dc3-cdee770c1134" />
+<img width="1366" height="768" alt="TB" src="https://github.com/user-attachments/assets/40000a3b-4c98-444f-a2ea-ff0c440dd4b6" />
+
 <img width="1366" height="768" alt="ens" src="https://github.com/user-attachments/assets/36b713c7-e2e5-49cc-9040-58c037470f47" />
 <img width="1366" height="768" alt="eleve" src="https://github.com/user-attachments/assets/06a0b44c-abb9-4fe5-b01c-5ba682d5c0a0" />
 <img width="1366" height="768" alt="bull" src="https://github.com/user-attachments/assets/54ea4387-db78-4eef-a49b-31d271661c3b" />

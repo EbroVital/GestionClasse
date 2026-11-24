@@ -1,12 +1,4 @@
 <?php
-/**
- * seed.php - Script pour remplir la base de données avec des données de test
- * 
- * ATTENTION : Ce script va SUPPRIMER toutes les données existantes !
- * 
- * Usage : php seed.php
- * Ou : http://localhost/Gestion_Classe/seed.php
- */
 
 $transaction_active = false;
 
@@ -18,7 +10,7 @@ echo "========================================\n\n";
 
 // Demander confirmation
 if (php_sapi_name() === 'cli') {
-    echo "⚠️  ATTENTION : Ce script va SUPPRIMER toutes les données existantes !\n";
+    echo "  ATTENTION : Ce script va SUPPRIMER toutes les données existantes !\n";
     echo "Voulez-vous continuer ? (oui/non) : ";
     $handle = fopen("php://stdin", "r");
     $line = fgets($handle);
@@ -34,7 +26,7 @@ try {
     // ==========================================
     // 1. NETTOYER LES TABLES
     // ==========================================
-    echo "🗑️  Nettoyage des tables...\n";
+    echo "  Nettoyage des tables...\n";
     
     $connexion->exec("SET FOREIGN_KEY_CHECKS = 0");
     $connexion->exec("TRUNCATE TABLE notes");
@@ -45,12 +37,12 @@ try {
     $connexion->exec("TRUNCATE TABLE matieres");
     $connexion->exec("SET FOREIGN_KEY_CHECKS = 1");
     
-    echo "✅ Tables nettoyées\n\n";
+    echo " Tables nettoyées\n\n";
     
     // ==========================================
     // 2. INSÉRER LES PROFESSEURS
     // ==========================================
-    echo "👨‍🏫 Insertion des professeurs...\n";
+    echo " Insertion des professeurs...\n";
 
     $mdp = password_hash("1234", PASSWORD_BCRYPT);
 
@@ -73,12 +65,12 @@ try {
         $stmt->execute($prof);
     }
     
-    echo "✅ " . count($professeurs) . " professeurs insérés\n\n";
+    echo " " . count($professeurs) . " professeurs insérés\n\n";
     
     // ==========================================
     // 3. INSÉRER LES MATIÈRES
     // ==========================================
-    echo "📚 Insertion des matières...\n";
+    echo " Insertion des matières...\n";
     
     $matieres = [
         ['Mathématiques', 4.0],
@@ -101,12 +93,12 @@ try {
         $stmt->execute($matiere);
     }
     
-    echo "✅ " . count($matieres) . " matières insérées\n\n";
+    echo " " . count($matieres) . " matières insérées\n\n";
     
     // ==========================================
     // 4. INSÉRER LES CLASSES
     // ==========================================
-    echo "🏫 Insertion des classes...\n";
+    echo " Insertion des classes...\n";
     
     $classes = [
         ['6ème A', '6ème', '2024-2025'],
@@ -127,12 +119,12 @@ try {
         $stmt->execute($classe);
     }
     
-    echo "✅ " . count($classes) . " classes insérées\n\n";
+    echo " " . count($classes) . " classes insérées\n\n";
     
     // ==========================================
     // 5. INSÉRER LES ÉLÈVES
     // ==========================================
-    echo "👨‍🎓 Insertion des élèves...\n";
+    echo " Insertion des élèves...\n";
     
     $noms = ['Durand', 'Lefebvre', 'Moreau', 'Simon', 'Laurent', 'Petit', 'Roux', 'David', 'Bertrand', 'Morel', 
              'Fournier', 'Girard', 'Bonnet', 'Dupuis', 'Lambert', 'Fontaine', 'Rousseau', 'Vincent', 'Muller', 'Lefevre',
@@ -172,12 +164,12 @@ try {
         }
     }
     
-    echo "✅ $eleve_count élèves insérés\n\n";
+    echo " $eleve_count élèves insérés\n\n";
     
     // ==========================================
     // 6. INSÉRER LES ENSEIGNEMENTS
     // ==========================================
-    echo "📖 Insertion des enseignements...\n";
+    echo " Insertion des enseignements...\n";
     
     // Mathématiques (prof 1) pour toutes les classes
     for ($classe_id = 1; $classe_id <= 8; $classe_id++) {
@@ -214,12 +206,12 @@ try {
         $connexion->exec("INSERT INTO enseignements (professeur_id, matiere_id, classe_id, annee_scolaire) VALUES (7, 7, $classe_id, '2024-2025')");
     }
     
-    echo "✅ Enseignements insérés\n\n";
+    echo " Enseignements insérés\n\n";
     
     // ==========================================
     // 7. INSÉRER LES NOTES
     // ==========================================
-    echo "📝 Insertion des notes (peut prendre un moment)...\n";
+    echo " Insertion des notes (peut prendre un moment)...\n";
     
     $types_evaluation = ['Devoir', 'Contrôle', 'Examen', 'Oral', 'TP'];
     $coefficients = [1.0, 1.5, 2.0, 2.5, 3.0];
@@ -279,14 +271,14 @@ try {
                     
                     // Afficher progression tous les 100 notes
                     if ($note_count % 100 === 0) {
-                        echo "  ⏳ $note_count notes insérées...\n";
+                        echo "   $note_count notes insérées...\n";
                     }
                 }
             }
         }
     }
     
-    echo "✅ $note_count notes insérées\n\n";
+    echo " $note_count notes insérées\n\n";
     
     // ==========================================
     // 8. STATISTIQUES FINALES
@@ -305,25 +297,25 @@ try {
     ];
     
     foreach ($stats as $label => $count) {
-        echo "✅ $label : $count\n";
+        echo " $label : $count\n";
     }
     
     echo "\n========================================\n";
     echo "  EXEMPLES DE CONNEXION\n";
     echo "========================================\n";
-    echo "📧 Prof : marie.dupont@ecole.fr\n";
-    echo "📧 Élève : (consultez la table eleves)\n\n";
+    echo " Prof : marie.dupont@ecole.fr\n";
+    echo " Élève : (consultez la table eleves)\n\n";
     
     $connexion->commit();
     
     
-    echo "✅ ✅ ✅  SEED TERMINÉ AVEC SUCCÈS ! ✅ ✅ ✅\n\n";
+    echo "  SEED TERMINÉ AVEC SUCCÈS ! \n\n";
     
 } catch (Exception $e) {
     if ($transaction_active) {
         $connexion->rollBack();
     }
-    echo "\n❌ ERREUR : " . $e->getMessage() . "\n";
+    echo "\n ERREUR : " . $e->getMessage() . "\n";
     echo "Fichier : " . $e->getFile() . "\n";
     echo "Ligne : " . $e->getLine() . "\n";
     echo "\nTrace :\n" . $e->getTraceAsString() . "\n";

@@ -1,31 +1,40 @@
 #  Système de Gestion de Classe
+![PHP](https://img.shields.io/badge/PHP-8.2-lightgrey?style=for-the-badge&logo=PHP)
+![MYSQL](https://img.shields.io/badge/MYSQL-8.X-lightgrey?style=for-the-badge&logo=MYSQL)
+![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=HTML)
+![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=CSS)
+![BOOTSTRAP](https://img.shields.io/badge/BOOTSTRAP-4.X-blue?style=for-the-badge&logo=BOOTSTRAP)
+![JQUERY](https://img.shields.io/badge/JQUERY-3.6-blue?style=for-the-badge&logo=JQUERY)
+![SWEET ALERT](https://img.shields.io/badge/SWEET%20ALERT-2-red?style=for-the-badge&logo=SWEETALERT)
+![FONT AWESOME](https://img.shields.io/badge/FONT%20AWESOME-5.15-blue?style=for-the-badge&logo=fontawesome)
+
 Un système complet de gestion scolaire développé en PHP natif, permettant aux professeurs de gérer les notes, générer des bulletins et suivre les performances des élèves.
 ##  Fonctionnalités
 ###  Espace Professeur
-- ✅ Dashboard interactif avec statistiques en temps réel
-- ✅ Gestion des notes : ajout, modification, suppression avec validation
-- ✅ Sélection dynamique des élèves par classe (AJAX)
-- ✅ Gestion des enseignements (matières par classe)
-- ✅ Génération de bulletins PDF individuels et en masse
-- ✅ Téléchargement ZIP de tous les bulletins d'une classe
-- ✅ Statistiques avancées : moyennes, taux de réussite
-- ✅ Alertes intelligentes : élèves en difficulté, sans notes récentes
+-  Dashboard interactif avec statistiques en temps réel
+-  Gestion des notes : ajout, modification, suppression avec validation
+-  Sélection dynamique des élèves par classe (AJAX)
+-  Gestion des enseignements (matières par classe)
+-  Génération de bulletins PDF individuels et en masse
+-  Téléchargement ZIP de tous les bulletins d'une classe
+-  Statistiques avancées : moyennes, taux de réussite
+-  Alertes intelligentes : élèves en difficulté, sans notes récentes
 ###  Espace Élève
-- ✅ Dashboard personnalisé avec toutes les informations académiques
-- ✅ Consultation des notes par trimestre et matière
-- ✅ Calcul automatique des moyennes pondérées
-- ✅ Téléchargement des bulletins au format PDF
-- ✅ Visualisation de la progression et du classement
-- ✅ Points forts et axes d'amélioration
+-  Dashboard personnalisé avec toutes les informations académiques
+-  Consultation des notes par trimestre et matière
+-  Calcul automatique des moyennes pondérées
+-  Téléchargement des bulletins au format PDF
+-  Visualisation de la progression et du classement
+-  Points forts et axes d'amélioration
 ###  Fonctionnalités techniques
-- ✅ Sélection dynamique classe → élèves (jQuery AJAX)
-- ✅ Auto-complétion des coefficients par matière
-- ✅ Génération PDF avec TCPDF
-- ✅ Confirmations élégantes avec SweetAlert2
-- ✅ Design responsive (Bootstrap 4)
-- ✅ Architecture MVC claire et maintenable
-- ✅ Requêtes préparées (protection SQL injection)
-- ✅ Gestion des sessions sécurisée
+-  Sélection dynamique classe → élèves (jQuery AJAX)
+-  Auto-complétion des coefficients par matière
+-  Génération PDF avec TCPDF
+-  Confirmations élégantes avec SweetAlert2
+-  Design responsive (Bootstrap 4)
+-  Architecture MVC claire et maintenable
+-  Requêtes préparées (protection SQL injection)
+-  Gestion des sessions sécurisée
 ##  Technologies utilisées
 ### Backend
 - PHP 8.2+ - Langage principal
@@ -48,18 +57,18 @@ Avant de commencer, assurez-vous d'avoir :
 - Composer (gestionnaire de dépendances PHP)
 - WAMP/XAMPP/MAMP (recommandé pour Windows/Mac)
 ##  Installation
-### 1️⃣ Cloner le projet
+###  Cloner le projet
 ```bash
 git clone https://github.com/EbroVital/GestionClasse.git
 cd GestionClasse
 ```
-### 2️⃣ Installer les dépendances
+###  Installer les dépendances
 ```bash
 composer install
 ```
 Cela installera automatiquement :
 - TCPDF
-### 3️⃣ Créer la base de données
+###  Créer la base de données
 ### Option A : Via phpMyAdmin
 - Ouvrez phpMyAdmin
 - Créez une base de données nommée dbclasse
@@ -72,7 +81,7 @@ mysql -u root -p -e "CREATE DATABASE gestion_classe CHARACTER SET utf8mb4 COLLAT
 # Importer le schéma
 mysql -u root -p gestion_classe < database/schema.sql
 ```
-### 4️⃣ Configurer la connexion
+###  Configurer la connexion
 Éditez le fichier database/connexion.php :
 ```bash
 <?php
@@ -91,7 +100,7 @@ try {
 }
 ?>
 ```
-### 5️⃣ Générer des données de test
+###  Générer des données de test
 ```bash
 php seed.php
 ```
@@ -104,7 +113,7 @@ Cela créera :
 Identifiants de test :
 - Professeur : marie.dupont / prof123
 - Élève : Consultez la table eleves
-### 6️⃣ Démarrer le serveur
+###  Démarrer le serveur
 Avec WAMP/XAMPP
 - Démarrez les services Apache et MySQL
 - Accédez à : http://localhost/Gestion_Classe/
